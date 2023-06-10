@@ -4,7 +4,7 @@ patterns = {
     '(goodbye|bye|see y[aAoO]|farewell|take care|adieu)[.!]?': 'bye',
     '(thanks|thank you|appreciate it|thankful|grateful|indebted to you|much obliged|pleasure|my appreciation)[.!]?': 'thanks',
     '(who you are|. about you .|What are u\?)[?!]?': 'about',
-    '(what can you do|what are your capabilities|tell me your abilities|how can you help|what are your skills)( to help me| me)?': 'skill',
+    '(what can you do|what you can do|what are your capabilities|tell me your abilities|how can you help|what are your skills)( to help me| me)?': 'skill',
     '(who created you|by whom were you brought .*|who is your creator|who gave birth to you|who can be credited for your creation)[?!]?': 'creation',
     '(what[\sA-z]{1,}|where[\sA-z]{1,}?)(area|place|location|geographical|country|are you from)[?]?': 'location',
     "(^. )?(hate you|dont't like you|don't trust you|you are fake|fuck you|faggot)": 'hate-you',

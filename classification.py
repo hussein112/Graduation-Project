@@ -64,12 +64,17 @@ def general_zsc(user_input, cand_labels):
     Returns:
         float: Zero-shot classification score.
     """
-    tokens = nltk.word_tokenize(user_input)
-    tags = nltk.pos_tag(tokens)
+    if(len(user_input) < 150):
+        score = 0
+        tokens = nltk.word_tokenize(user_input)
+        tags = nltk.pos_tag(tokens)
+
+        for tag in tags:
+            if(tag[-1] == 'VBG' and classifier(user_input, candidate_labels=["death"])['scores'][0] > 0.5): # gerund, verb, present participle & in the context of death
+                score += 1
     
-    for tag in tags:
-        if(tag[-1] == 'VBG'): # gerund, verb, present participle
-            return 'immediate-help'
+    if score >= len(user_input) / 2:
+        return 'immediate-help' 
         
     return classifier(user_input,
         candidate_labels=cand_labels,

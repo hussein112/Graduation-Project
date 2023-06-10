@@ -10,6 +10,7 @@
 responses = {
     # General Responses (Out of the conversation loop)
     'greetings' : ["Hello {user}, How do you feel today?", "Hello {user}, Why did you reach out?"],
+    
     'start': ["Great, thank you. How are you?", "I'm fine; how about you?", "Completely fine, you?"],
     'thanks': ["You're Welcome", "You're most welcome"],
     'careless': ["I really care about you!", "Trust me, you are my priority.", "I'm genuinely concerned about you!"],
@@ -26,28 +27,10 @@ responses = {
     'repeat': ['"If something is worth saying, it is worth saying three times over." ― Steven Magee', "I'm sorry for repeating myself.", "Sorry if i repeated myself"],
     'wrong': ["Look, I give you the best that I can, however, a clinical psychologist will help you more!", "Hussein, I'm sorry if I made a mistake; visiting Psychologist will give you more accurate information."],
     'stupid': ["Sorry if I made you angry!", "Sorry if I didn't understand you; I'm trying my best to help you."],
-    'bot-definition': ["""
-                           {user}, I'm a domain-specific chatbot! Here is what I can/can't do:
-                               I can:
-                                   1. Listen to your problems all the day
-                                   2. Be beside you 24/24
-                               I can't:
-                                   1. Chat with you with a general conversation
-                                   2. talk about the Weather! or any other out-of-my-scope stuff.
-                               In order to have the most optimal conversation, I encourage you to respond to my questions in plain, simple, and error-free English.
-                               You can know more in the "About" section.
-                           """,
-                           """
-                            {user}, I'm a domain-specific chatbot! here is what I am/I am not:
-                               I'm:
-                                   1. A Listener
-                                   2. Emotional Supporter
-                               I'm not:
-                                   1. General chatting chatbot
-                             In order to have the most optimal conversation, I encourage you to respond to my questions in plain, simple, and error-free English.
-                               You can know more in the "About" section.
-
-                           """],
+    'bot-definition': [
+                            """{user}, I'm a domain-specific chatbot! Here is what I can/can't do:\n I can:\n  1. Listen to your problems all the day.\n  2. Be beside you 24/24.\n I can't:\n\n  1. Chat with you with a general conversation.\n2. talk about the Weather! or any other out-of-my-scope stuff.\nIn order to have the most optimal conversation, I encourage you to respond to my questions in plain, simple, and error-free English.
+                               You can know more in the "About" section.""",
+                           """{user}, I'm a domain-specific chatbot! here is what I am/I am not:\n I'm:\n\n  1. A Listener\n  2. Emotional Supporter\n I'm not:\n  1. General chatting chatbot\nIn order to have the most optimal conversation, I encourage you to respond to my questions in plain, simple, and error-free English. \nYou can know more in the "About" section."""],
         'ask-for-asking': ["The more questions you answer the more I can help.", "It is up to you whether or not you answer. However, you should know that talking about problems can help you feel better!"],
     
     'bot-feeling': ["I'm happy, when you are!", "Normal!", "It depends on how you feel!"],

@@ -64,7 +64,7 @@ def extract_meta(request):
         user_meta['CSSRS'] = int(CSSRS)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='192.168.0.105')
+    app.run(debug=True, host='192.168.0.102')
     
 # To run the API, you can save the code to a file (e.g. app.py), and then run the following command in your terminal:
 # FLASK_APP=app.py flask run

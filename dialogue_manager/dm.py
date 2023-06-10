@@ -85,8 +85,8 @@ def prepare_for_zsc(text):
     """
     text = ''.join([word + '-' for word in text.split(' ') if word not in stop_words])
     return text.split('-')
-    
-    
+
+
 def is_related_to_previous_prompt(user_input):
     """
     Check if the user input is related to the previous prompt in the conversation context.
@@ -97,6 +97,9 @@ def is_related_to_previous_prompt(user_input):
     Returns:
         list: A list containing a boolean value indicating if the input is related to the previous prompt,
               and the previous prompt if it is related.
+
+    FOR MORE ACCURACY: we can get synonyms, and different of the word to be classified.
+    e.g., 'creation' => 'created' = past, 'made' => synoym...
     """
     if(len(context_) >= 2):
         if(general_zsc(user_input, context_[-1]) > 0.5):
@@ -413,7 +416,6 @@ def generate_response(user_input):
 #     print("Conversation History: ", conversation_history)
 #     print("Escaping Context Counter: ", dialogue['escaped_context_counter'])
 
-    
     if(len(conversation_history) <= 1):
         escaping_context = 'feeling' # in order to detect noisy input in the first prompt
         
@@ -440,6 +442,9 @@ def generate_response(user_input):
     elif(is_random(user_input)):
         return random.choice(responses['random'])
     elif(escaping_context != '' and is_out_of_context(user_input, escaping_context)):
+        is_related, previous_context = is_related_to_previous_prompt(user_input)
+        if(is_related):
+            return random.choice(responses[previous_context])
         dialogue['escaped_context_counter'] += 1
         if(dialogue['escaped_context_counter'] >= 2 or len(conversation_history) == 0): # faulty input twice, or first prompt
             return noisy_input()

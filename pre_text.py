@@ -100,11 +100,6 @@ def is_empty(user_input):
         return True
     else:
         return False
-    
-    
-def is_noisy(user_input):
-    is_related, previous_prompt = is_related_to_previous_prompt(user_input)
-    return True
 
 def noisy_input():
     return random.choice(responses['bot-definition'])
@@ -113,7 +108,6 @@ def remove_punc(_string):
     new_string = _string.translate(str.maketrans('', '', string.punctuation))
     return new_string.strip()
 
-  
 
 def is_typical(user_input):
     user_input = remove_punc(user_input)
