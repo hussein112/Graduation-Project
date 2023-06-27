@@ -1,9 +1,9 @@
 # Graduation-Project
 
-A try to build a chatbot for suicide prevention (i.e., automate suicide hotlines)
+A try to build a text-based chatbot for suicide prevention (i.e., automate suicide hotlines)
 
 
-# This is a "Proof of Concept" project, so before downloading, i encourage you to read the report.
+# This is a "Proof of Concept" project, so I encourage you to read the report before downloading.
 
 This repository contains the abstract Flask API, for [the presentation, report, and more details](https://drive.google.com/drive/folders/1HYN7gbVf9Rkg-QmhfJaOl67bNPwbrmoK?usp=sharing)
 
